@@ -14133,8 +14133,8 @@ namespace PokeCryptSharp
 
         private static unsafe void sub_9E9D8(IntPtr input, IntPtr output)
         {
-	        var temp = new int[0x32C / 4];
-	        var temp2 = new int[0x100 / 4];
+	        var temp = new int[0x32C / sizeof(int)];
+	        var temp2 = new int[0x100 / sizeof(int)];
 
             Marshal.Copy(input, temp2, 0, 0x100 / sizeof(int));
 
